@@ -9,6 +9,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+
 /**
  * Class BaseController
  *
@@ -54,5 +55,16 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+    }
+
+    protected $userModel;
+    protected $productModel;
+    protected $transactionModel;
+
+    public function __construct()
+    {
+        $this->userModel = new \App\Models\UserModel();
+        $this->productModel = new \App\Models\ProductModel();
+        $this->transactionModel = new \App\Models\TransactionModel();
     }
 }

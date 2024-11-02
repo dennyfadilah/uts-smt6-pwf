@@ -1,0 +1,64 @@
+#sidebar {
+	height: 100%;
+}
+
+#editPicture:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#btnUser {
+	background-color: #e9ecef;
+	border: 1px solid #dee2e6;
+}
+
+#btnUser:hover {
+	background-color: #9ea0a2;
+	color: #ffffff;
+}
+
+.custom-bg {
+	background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/05150a56868831.59bfe359814ba.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.custom-bg::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+	z-index: 1; /* Ensure it is above the background image */
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.form-group {
+	margin-bottom: 8px;
+}
+
+.nav-link {
+	color: #ffffff;
+}
+
+.nav-link:hover {
+	color: #198754;
+}
+
+.rotate {
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
